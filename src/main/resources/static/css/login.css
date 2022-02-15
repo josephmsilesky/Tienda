@@ -35,6 +35,47 @@ body{
     padding: 0 40px;
     box-sizing: border-box;
 }
-form .txt{
+.txt_field input{
+    width:100%;
+    padding:0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    background: none;
+    outline:none;
+    position:relative;
+    border-bottom: 2px solid #8E0CC7;
+    margin: 30px 0;
+}
+
+.txt_field label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#186ED0;
+    transform: translateY(-200%);
+    font-size: 16px;
+    pointer-events: none;
+
+}
+
+.txt_field label:hover{
+
+    transform: translateY(-50%);
+
+
+}
+
+a{
+    display:inline-block;
+    font-size:1em;
+    background: #2184F5;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+        
+}
+
+a:hover{
     
 }

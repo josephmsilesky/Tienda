@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2ae4fe;
+  border-radius: 25px;
+}
+
+li {
+  float: left;
+	
+}
+
+li a {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-align: left;
+  padding: 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+    background-color: #ffb700;
+	color: black;
+}
+
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+
+
+.menu-outer{
+	background-color: #00000;
+	border-radius: 25px;
+}
+
+
+body{
+	background-color:  #160B61;
+}
+
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 400px;
+	height: 420px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+    transform:translate(-50%,-50%);
+}
+
+
+.content h1{
+    text-align: center;
+    padding: 20px 0;
+    
+	color: black;
+	background-color: #ffffff;
+	
+}
+
+
+.content form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+
+.txt_field1 input{
+    width:100%;
+    padding:0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    background: none;
+    outline:none;
+    position:relative;
+    border: 2px solid #7714ff;
+    margin: 30px 0;
+	overflow: auto;
+	border-radius: 10px;
+}
+
+
+.txt_field1 label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#00000;
+    transform: translateY(-500%) translateX(40%);
+    font-size: 16px;
+    pointer-events: none;
+	overflow: hidden;
+
+}
+.txt_field2 input{
+    width:100%;
+    padding:0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    background: none;
+    outline:none;
+    position:relative;
+    border: 2px solid #7714ff;
+    margin: 30px 0;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.txt_field2 label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#000000;
+    transform: translateY(65%) translateX(40%);
+    font-size: 16px;
+    pointer-events: none;
+	overflow: hidden;
+
+}
+.txt_field label:hover{
+
+    transform: translateY(-50%);
+	overflow: hidden;
+
+
+}
+
+.content a{
+    display:inline-block;
+    font-size:1em;
+    background: #2ae4fe;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+	color: white;
+	transform: translateX(50%);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+        
+}
+.signup_link{
+	color: black;
+	transform: translateY(77%);
+}
+.signup_link a{
+	color: black;
+
+}
+.signup_link a:hover{
+	color: white;
+
+}
+
+.boton{
+	transform: translateX(400%);
+	
+}
+
