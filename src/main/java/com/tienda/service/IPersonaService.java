@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package com.tienda.service;
 
-/**
- *
- * @author joseph
- */
+import com.tienda.entity.Persona;
+import java.util.List;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
 public interface IPersonaService {
+    
+    public List<Persona> getAllperson();
+    public void savePerson(Persona persona);
+    public Persona getPersonaById(long id);
+    public void delete(long id);
+
+
     
 }
