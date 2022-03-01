@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IPersonaService {
     
-    public List<Persona> getAllperson();
+    public List<Persona> getAllPerson();
     public void savePerson(Persona persona);
     public Persona getPersonaById(long id);
     public void delete(long id);

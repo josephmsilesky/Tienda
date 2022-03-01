@@ -14,7 +14,7 @@ public class PersonaService implements IPersonaService{
     private PersonaRepository personaRepository;
             
     @Override
-    public List<Persona> getAllperson() {
+    public List<Persona> getAllPerson() {
         return (List<Persona>)personaRepository.findAll();
     }
 

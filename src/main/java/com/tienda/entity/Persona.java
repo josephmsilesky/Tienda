@@ -73,7 +73,7 @@ public class Persona implements Serializable{
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -81,11 +81,16 @@ public class Persona implements Serializable{
     }
 
     public Pais getPais() {
-        return pais;
+        return this.pais;
     }
 
     public void setPais(Pais pais) {
         this.pais = pais;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "id=" + id + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", telefono=" + telefono + ", email=" + email + ", nombre=" + nombre + ", pais=" + pais + '}';
     }
     
   
