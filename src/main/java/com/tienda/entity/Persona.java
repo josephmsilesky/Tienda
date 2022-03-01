@@ -24,10 +24,19 @@ public class Persona implements Serializable{
     private String apellido2;
     private String telefono;
     private String email;
+    private String nombre;
     
     @ManyToOne
     @JoinColumn(name="paises_id")
     private Pais pais;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     
     
