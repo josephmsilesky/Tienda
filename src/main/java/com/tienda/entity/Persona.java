@@ -88,11 +88,7 @@ public class Persona implements Serializable{
         this.pais = pais;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "id=" + id + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", telefono=" + telefono + ", email=" + email + ", nombre=" + nombre + ", pais=" + pais + '}';
-    }
-    
+
   
     
     

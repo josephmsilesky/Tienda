@@ -33,11 +33,4 @@ public class PersonaService implements IPersonaService{
         personaRepository.deleteById(id);
     }
 
-
-
-
-
-    
-    
-    
 }
