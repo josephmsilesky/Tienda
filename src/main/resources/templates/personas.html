@@ -5,11 +5,10 @@
         <meta charset="UTF-8">
     </head>
     <body>
+
     <head th:replace="plantilla/template::header"></head>
     <h1 th:text="${titulo}"></h1>
-
-
-
+<div class="container">
     <table class="table">
         <thead>
             <tr>
@@ -20,7 +19,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Pais</th>
                 <th scope="col">Eliminar</th>
-                
+
             </tr>
         </thead>
         <tbody>
@@ -41,7 +40,9 @@
             </tr>
         </th:block>
     </tbody>
-</table>   
+</table>  
+    </div>
 <footer th:replace="plantilla/template::footer"></footer>
+
 </body>
 </html>
