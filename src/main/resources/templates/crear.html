@@ -40,7 +40,7 @@
                 <label for="paises" class="form-label">Pais</label>
                 
                 <div>
-                    <select th:field="*{pais}" placeholder= "Pais" id="pais">
+                    <select class="form-select" th:field="*{pais}" placeholder= "Pais" id="pais">
                         <option th:each="x:${paises}"
                                 th:value="${x.id}"
                                 th:text="${x.pais}">
@@ -49,7 +49,7 @@
 
             </div>
 
-
+            <br>
 
             <button type="submit" value="Guardar">Submit</button>
         </form>
