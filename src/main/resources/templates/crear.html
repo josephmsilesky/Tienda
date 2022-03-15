@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html>
-<head>
-<title>TODO supply a title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<form th:object = "${persona}" th:action="@{/save}"method="POST">
-<div class="form-group-row">
-<label for="nombre">Nombre</label>
-<input type="text" th:field="*{nombre}" placeholder= "Nombre Cliente" id="nombres" aria-describedby="emailHelp">
-</div>
-<div class="form-group-row">
-<label for="nombre">Apellido1</label>
-<input type="text" th:field="*{apellido1}" placeholder= "Apellido 1 Cliente" id="nombres" aria-describedby="emailHelp">
-</div>
-<div class="form-group-row">
-<label for="nombre">Apellido2</label>
-<input type="text" th:field="*{apellido2}" placeholder= "Apellido 2 Cliente" id="nombres" aria-describedby="emailHelp">
-</div>
-<div class="form-group-row">
-<label for="nombre">Telefono</label>
-<input type="text" th:field="*{telefono}" placeholder= "Telefono Cliente" id="nombres" aria-describedby="emailHelp">
-</div>
-<div class="form-group-row">
-<label for="nombre">Email</label>
-<input type="text" th:field="*{email}" placeholder= "Email Cliente" id="nombres" aria-describedby="emailHelp">
-</div>
-<div class="form-group-row">
-<label for="pais">Pais</label>
-<input type="text" th:field="*{pais}" placeholder= "Pais" id="nombres" aria-describedby="emailHelp">
-</div>
-<br>
-<button type="sibmit" value="Guardar">Submit</button>
 
-</form>
+    <head th:replace="plantilla/template::head">
+        <title>Mi Tienda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+    <head th:replace="plantilla/template::header"></head>
+
+
+    <form th:object = ${persona}
+          th:action ="@{/save}"
+          method="POST"
+          >
+
+        <input type="hidden" th:field="*{id}">
+        <div class="form-group-row">
+            <label for="nombre">Nombre</label>
+            <input type="text" th:field="*{nombre}" placeholder= "Nombre Cliente" id="nombres" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group-row">
+            <label for="nombre">Apellido1</label>
+            <input type="text" th:field="*{apellido1}" placeholder= "Apellido 1 Cliente" id="nombres" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group-row">
+            <label for="nombre">Apellido2</label>
+            <input type="text" th:field="*{apellido2}" placeholder= "Apellido 2 Cliente" id="nombres" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group-row">
+            <label for="nombre">Telefono</label>
+            <input type="text" th:field="*{telefono}" placeholder= "Telefono Cliente" id="nombres" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group-row">
+            <label for="nombre">Email</label>
+            <input type="text" th:field="*{email}" placeholder= "Email Cliente" id="nombres" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group-row">
+            <label for="paises">Pais</label>
+            <div>
+                <select th:field="*{pais}" placeholder= "Pais" id="pais">
+                    <option th:each="x:${paises}"
+                            th:value="${x.id}"
+                            th:text="${x.pais}">
+                </select>
+            </div>
+
+        </div>
+
+
+
+        <button type="submit" value="Guardar">Submit</button>
+    </form>
+
+<footer th:replace="plantilla/template::footer"></footer>
 </body>
 </html>

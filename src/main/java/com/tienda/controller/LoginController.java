@@ -9,7 +9,7 @@ public class LoginController {
     
     @GetMapping("/")
     public String index(){
-        return "login";
+        return "../templates/plantilla/template";
     }
-    
+
 }

@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.6.3</version>
+            <version>2.6.4</version>
             <type>module</type>
         </dependency>
     </dependencies>
