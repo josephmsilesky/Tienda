@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head th:replace="plantilla/template::head">
-        <title>TODO supply a title</title>
+        <title>Tienda</title>
         <meta charset="UTF-8">
     </head>
     <body>
@@ -11,17 +11,19 @@
 
     <div class="container">
         <h1 th:text="${titulo}"></h1>
+        <h1 th:text="#{index.titulo}">xxx</h1>
+<!--        <h1><spring:message code="titulo" text="default"/></h1>-->
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido 1</th>
-                    <th scope="col">Apellido 2</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Pais</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Eliminar</th>
+                    <th scope="col" th:text="#{cliente.nombre}">xxx</th>
+                    <th scope="col"th:text="#{cliente.apellido}">xxx</th>
+                    <th scope="col"th:text="#{cliente.segundoapellido}">xxx</th>
+                    <th scope="col" th:text="#{cliente.correo}">xxx</th>
+                    <th scope="col" th:text="#{cliente.telefono}">xxx</th>
+                    <th scope="col" th:text="#{cliente.pais}">xxx</th>
+                    <th scope="col" th:text="#{accion.editar}">xxx</th>
+                    <th scope="col" th:text="#{accion.eliminar}">xxx</th>
 
                 </tr>
             </thead>
@@ -45,7 +47,30 @@
             </tbody>
         </table>  
     </div>
+    <span th:text="#{lang.change}"></span>:
+    <select id="locales">
+        <option value=""></option>
+<!--        <option value="en" th:text="#{lang.eng}"></option>-->
+        <option value="en">usa</option>
+        <option value="es" th:text="#{lang.es}"></option>
+        <option value="fr" th:text="#{lang.fr}"></option>
+    </select>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#locales").change(function () {
+                var selectedOption = $('#locales').val();
+                if (selectedOption != '') {
+                    window.location.replace('personas?lang=' + selectedOption);
+                }
+            });
+        });
+    </script>
+    
     <footer th:replace="plantilla/template::footer"></footer>
+    
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 package com.tienda.service;
 
 import com.tienda.entity.Pais;
@@ -10,11 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaisService implements IPaisService {
 
-        @Autowired
-        private PaisRepository paisRepository;
+    @Autowired
+    private PaisRepository paisRepository;
+
     @Override
     public List<Pais> listCountry() {
         return (List<Pais>) paisRepository.findAll();
     }
-    
+
 }
