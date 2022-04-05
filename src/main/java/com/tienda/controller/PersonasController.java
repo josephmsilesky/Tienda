@@ -29,6 +29,14 @@ public class PersonasController {
         return "personas";
     }
 
+    @GetMapping("/persona")
+    public String persona(Model model) {
+        List<Persona> listaPersonas = personaService.getAllPerson();
+        model.addAttribute("titulo", "Personas");
+        model.addAttribute("personas", listaPersonas);
+        return "personas";
+    }
+
     @GetMapping("personasN")
     public String crearPersona(Model model) {
         List<Pais> listaPais = paisService.listCountry();
