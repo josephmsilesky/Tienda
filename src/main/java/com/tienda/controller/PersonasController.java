@@ -21,16 +21,16 @@ public class PersonasController {
     @Autowired
     private IPaisService paisService;
 
-    @GetMapping("/personas")
-    public String index(Model model) {
-        List<Persona> listaPersonas = personaService.getAllPerson();
-        model.addAttribute("titulo", "Personas");
-        model.addAttribute("personas", listaPersonas);
-        return "personas";
-    }
+//    @GetMapping("/personas")
+//    public String index(Model model) {
+//        List<Persona> listaPersonas = personaService.getAllPerson();
+//        model.addAttribute("titulo", "Personas");
+//        model.addAttribute("personas", listaPersonas);
+//        return "personas";
+//    }
 
     @GetMapping("/persona")
-    public String persona(Model model) {
+    public String index(Model model) {
         List<Persona> listaPersonas = personaService.getAllPerson();
         model.addAttribute("titulo", "Personas");
         model.addAttribute("personas", listaPersonas);
